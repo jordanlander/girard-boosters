@@ -83,8 +83,8 @@ const Hero = () => (
           <br className="hidden sm:block"/> Power the <span style={{color: BRAND.gold}}>Jackets</span>.
         </h1>
         <p className="mt-5 text-lg text-gray-700 max-w-xl">
-          The Boosters support Girard School Districtâ€™s music and drama programs (Kâ€“12) through fundraising,
-          volunteers, and yearâ€‘round community events.
+          The Boosters support Girard School Districtâ€™s music and drama programs (Kâ€"12) through fundraising,
+          volunteers, and yearâ€'round community events.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href="#events" className="px-5 py-3 rounded-xl font-bold shadow" style={{background: BRAND.red, color: BRAND.white}}>See Events</a>
@@ -108,7 +108,7 @@ const About = () => (
     <div className="grid lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2 text-gray-800 leading-relaxed">
         <p className="mb-4">
-          Weâ€™re a volunteer 501(c)(3) backing Kâ€“12 music and drama across Girard School Districtâ€”funding instruments and repairs, sets and costumes, travel, scholarships, and the little essentials that make performances feel big. Want in? Join the crew.
+          Weâ€™re a volunteer 501(c)(3) backing Kâ€"12 music and drama across Girard School Districtâ€"funding instruments and repairs, sets and costumes, travel, scholarships, and the little essentials that make performances feel big. Want in? Join the crew.
         </p>
         <ul className="space-y-2 list-disc pl-6">
           <li>Scholarships, lessons, and uniform/fee assistance</li>
@@ -137,22 +137,22 @@ const Programs = () => (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372160" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Elk Valley Elementary</div>
-        <div className="text-gray-700">Kâ€“4 general music, performances, and arts integration.</div>
+        <div className="text-gray-700">Kâ€"4 general music, performances, and arts integration.</div>
       </a>
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372161" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Rice Avenue Middle School</div>
-        <div className="text-gray-700">5â€“8 band/chorus and RAMS drama opportunities.</div>
+        <div className="text-gray-700">5â€"8 band/chorus and RAMS drama opportunities.</div>
       </a>
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372159" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Girard High School</div>
-        <div className="text-gray-700">9â€“12 music, marching band, theatre productions, and more.</div>
+        <div className="text-gray-700">9â€"12 music, marching band, theatre productions, and more.</div>
       </a>
     </div>
   </Section>
 );
 
 const Officers = () => (
-  <Section id="officers" title="2025â€“26 Officers">
+  <Section id="officers" title="2025â€"26 Officers">
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {[
         ["Mike Abbey", "President"],
@@ -228,7 +228,7 @@ const Donate = () => (
   <Section id="donate" title="Support the Arts">
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="rounded-2xl p-6 border bg-white shadow-sm" style={{borderColor: BRAND.gold}}>
-        <h3 className="font-extrabold text-xl" style={{color: BRAND.red}}>Oneâ€‘Time Gift</h3>
+        <h3 className="font-extrabold text-xl" style={{color: BRAND.red}}>Oneâ€'Time Gift</h3>
         <p className="text-gray-700 mt-2">Fuel scholarships, sets, instruments, travel, and more.</p>
         <a href={process.env.NEXT_PUBLIC_DONATE_URL || "#"} className="mt-4 inline-block px-5 py-3 rounded-xl font-bold shadow" style={{background: BRAND.red, color: BRAND.white}}>Donate Now</a>
       </div>
@@ -249,7 +249,7 @@ const Donate = () => (
 const Sponsors = () => (
   <Section id="sponsors" title="Sponsors & Partners">
     <div className="grid lg:grid-cols-3 gap-6">
-      {[{"tier":"Presenting","amt":"$2,500+","perks":["Logo on homepage & programs","Band/Drama shoutâ€‘outs","Vendor table at fairs"]},{"tier":"Gold","amt":"$1,000","perks":["Logo on website","Social media thanks","2 season tickets"]},{"tier":"Red","amt":"$500","perks":["Website mention","Sponsor decal","1 season ticket"]}].map((t)=> (
+      {[{"tier":"Presenting","amt":"$2,500+","perks":["Logo on homepage & programs","Band/Drama shoutâ€'outs","Vendor table at fairs"]},{"tier":"Gold","amt":"$1,000","perks":["Logo on website","Social media thanks","2 season tickets"]},{"tier":"Red","amt":"$500","perks":["Website mention","Sponsor decal","1 season ticket"]}].map((t)=> (
         <div key={t.tier} className="rounded-2xl p-6 border shadow-sm bg-white" style={{borderColor: BRAND.gold}}>
           <div className="text-2xl font-extrabold" style={{color: BRAND.red}}>{t.tier}</div>
           <div className="text-gray-900 font-bold mt-1">{t.amt}</div>
@@ -279,7 +279,7 @@ const Contact = () => (
       </div>
       <div id="join" className="rounded-2xl p-6" style={{background: BRAND.gold}}>
         <h3 className="font-extrabold text-xl" style={{color: BRAND.black}}>Join / Volunteer</h3>
-        <p className="mt-2 text-gray-900">Add a simple Google Form or Givebutter volunteer form here to route signâ€‘ups to the right chairperson.</p>
+        <p className="mt-2 text-gray-900">Add a simple Google Form or Givebutter volunteer form here to route signâ€'ups to the right chairperson.</p>
         <a href={process.env.NEXT_PUBLIC_VOLUNTEER_URL || "#"} className="mt-4 inline-block px-4 py-2 rounded-xl font-bold" style={{background: BRAND.black, color: BRAND.white}}>Open Volunteer Form</a>
       </div>
     </div>
@@ -307,6 +307,7 @@ export default function App() {
     </main>
   );
 }
+
 
 
 
