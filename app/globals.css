@@ -1,1 +1,17 @@
 ﻿@import "tailwindcss";
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-heading: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+html, body { font-family: var(--font-body); }
+h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: .5px; }
+/* Hide placeholder calendar frame */
+iframe[src="about:blank"] { display: none; }
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-heading: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+html, body { font-family: var(--font-body); }
+h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: .5px; }
+/* Hide placeholder calendar frame until you set the env var */
+iframe[src="about:blank"] { display: none; }
