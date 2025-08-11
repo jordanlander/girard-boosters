@@ -83,7 +83,7 @@ const Hero = () => (
           <br className="hidden sm:block"/> Power the <span style={{color: BRAND.gold}}>Jackets</span>.
         </h1>
         <p className="mt-5 text-lg text-gray-700 max-w-xl">
-          The Boosters support Girard School Districtâ€™s music and drama programs (Kâ€"12) through fundraising,
+          The Boosters support Girard School District's music and drama programs (K-12) through fundraising,
           volunteers, and yearâ€'round community events.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -108,7 +108,7 @@ const About = () => (
     <div className="grid lg:grid-cols-3 gap-8">
       <div className="lg:col-span-2 text-gray-800 leading-relaxed">
         <p className="mb-4">
-          Weâ€™re a volunteer 501(c)(3) backing Kâ€"12 music and drama across Girard School Districtâ€"funding instruments and repairs, sets and costumes, travel, scholarships, and the little essentials that make performances feel big. Want in? Join the crew.
+          We're a volunteer 501(c)(3) backing K-12 music and drama across Girard School District-funding instruments and repairs, sets and costumes, travel, scholarships, and the little essentials that make performances feel big. Want in? Join the crew.
         </p>
         <ul className="space-y-2 list-disc pl-6">
           <li>Scholarships, lessons, and uniform/fee assistance</li>
@@ -137,22 +137,22 @@ const Programs = () => (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372160" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Elk Valley Elementary</div>
-        <div className="text-gray-700">Kâ€"4 general music, performances, and arts integration.</div>
+        <div className="text-gray-700">K-4 general music, performances, and arts integration.</div>
       </a>
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372161" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Rice Avenue Middle School</div>
-        <div className="text-gray-700">5â€"8 band/chorus and RAMS drama opportunities.</div>
+        <div className="text-gray-700">5-8 band/chorus and RAMS drama opportunities.</div>
       </a>
       <a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372159" target="_blank" rel="noreferrer" className="rounded-2xl p-5 border shadow-sm bg-white hover:shadow-md transition" style={{borderColor: BRAND.gold}}>
         <div className="font-extrabold text-lg" style={{color: BRAND.red}}>Girard High School</div>
-        <div className="text-gray-700">9â€"12 music, marching band, theatre productions, and more.</div>
+        <div className="text-gray-700">9-12 music, marching band, theatre productions, and more.</div>
       </a>
     </div>
   </Section>
 );
 
 const Officers = () => (
-  <Section id="officers" title="2025â€"26 Officers">
+  $12025-26 Officers">
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {[
         ["Mike Abbey", "President"],
@@ -301,12 +301,15 @@ export default function App() {
       <Contact />
       <footer className="mt-10 border-t py-8 text-center text-sm" style={{borderColor: BRAND.gold}}>
         <p>
-          Â© {new Date().getFullYear()} Girard Music and Drama Boosters Â· Built with â¤ by the community
+          © {new Date().getFullYear()} Girard Music and Drama Boosters Â· Built with â¤ by the community
         </p>
       </footer>
     </main>
   );
 }
+
+
+
 
 
 
