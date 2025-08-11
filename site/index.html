@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girard Music and Drama Boosters — K-12 Arts Across Girard School District</title>
+  <meta name="description" content="Volunteer nonprofit supporting K-12 music and drama across Girard School District — instruments, sets, travel, scholarships, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --red:#B22222;      /* Jacket Red */
+      --gold:#F9C80E;     /* Jacket Gold */
+      --honey:#FFD166;    /* Honey accent */
+      --black:#111111;
+      --white:#FFFFFF;
+      --bg:#fafafa;
+      --text:#222222;
+      --muted:#6b7280;    /* gray-500-ish */
+      --radius:18px;
+      --shadow:0 6px 20px rgba(0,0,0,.08);
+      --shadow-soft:0 2px 8px rgba(0,0,0,.06);
+    }
+    html,body{height:100%}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    h1,h2,h3,.display{
+      font-family: Anton, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      letter-spacing:.5px;
+      margin:0 0 .2rem 0;
+      color:var(--black);
+    }
+    a{color:var(--red); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1120px; margin:0 auto; padding:0 1rem}
+    .btn{display:inline-block; padding:.9rem 1.1rem; border-radius:12px; font-weight:800; text-decoration:none}
+    .btn-solid{background:var(--red); color:var(--white); box-shadow:var(--shadow)}
+    .btn-outline{border:2px solid var(--red); color:var(--red); background:transparent}
+    .btn-gold{background:var(--gold); color:var(--black); box-shadow:var(--shadow)}
+    .chip{display:inline-block; padding:.25rem .55rem; border-radius:999px; background:var(--honey); font-weight:700}
+    .card{background:var(--white); border:1px solid rgba(0,0,0,.08); border-radius:var(--radius); box-shadow:var(--shadow-soft)}
+    .grid{display:grid; gap:1rem}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    @media (max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)} .grid-4{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr} }
+    header.site-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid rgba(0,0,0,.08)}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .nav a{font-weight:700; color:var(--black)}
+    .navlinks{display:flex; gap:1rem; align-items:center}
+    .hamburger{display:none}
+    @media (max-width:860px){
+      .navlinks{display:none}
+      .hamburger{display:block}
+      #menu-toggle:checked ~ .navlinks-mobile{display:block}
+      .navlinks-mobile{display:none; padding:1rem; border-top:1px solid rgba(0,0,0,.08)}
+      .navlinks-mobile a{display:block; padding:.6rem 0; font-weight:700; color:var(--black)}
+    }
+    .hero{padding:56px 0 24px; background:linear-gradient(180deg, rgba(249,200,14,.15), transparent 60%)}
+    .hero .title{font-size:clamp(1.8rem,4vw,3rem)}
+    .hero .subtitle{color:var(--muted); max-width:70ch}
+    section{padding:40px 0}
+    section .section-header{display:flex; align-items:center; justify-content:space-between; margin-bottom:16px}
+    section .section-header h2{font-size:clamp(1.4rem,3vw,2rem)}
+    .kicker{color:var(--black); background:var(--honey); display:inline-block; padding:.25rem .6rem; border-radius:10px; font-weight:800}
+    /* Facebook and Calendar embeds */
+    .embed{border:1px solid rgba(0,0,0,.08); border-radius:12px; overflow:hidden; background:#fff}
+    iframe{border:0; width:100%}
+    iframe[src="about:blank"]{display:none}
+    .muted{color:var(--muted)}
+    footer{margin-top:40px; border-top:1px solid rgba(0,0,0,.1); padding:28px 0; background:#fff}
+    .tickets-banner{display:none; background:var(--red); color:var(--white); padding:.75rem 0;}
+  .tickets-banner .btn{background:var(--white); color:var(--red); box-shadow:var(--shadow)}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div style="display:flex;gap:.7rem;align-items:center">
+        <div style="width:38px;height:38px;border-radius:999px;border:3px solid var(--red);background:var(--gold)"></div>
+        <div>
+          <div class="display" style="color:var(--red);font-size:1.1rem">Girard Music and Drama Boosters</div>
+          <div class="muted" style="font-size:.9rem">K-12 Arts • Girard School District</div>
+        </div>
+      </div>
+      <input id="menu-toggle" type="checkbox" hidden>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#officers">Officers</a>
+        <a href="#events">Events</a>
+        <a href="#media">Media</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-solid" href="#donate" aria-label="Donate or Sponsor">Donate</a>
+      </nav>
+      <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </label>
+    </div>
+    <div class="container navlinks-mobile">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#officers">Officers</a>
+      <a href="#events">Events</a>
+      <a href="#media">Media</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid" href="#donate">Donate</a>
+    </div>
+  </header>
+  <div id="tickets" class="tickets-banner" role="region" aria-label="Tickets">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <div><strong>Tickets</strong> <span id="tickets-text">Now on sale</span></div>
+      <a id="tickets-link" class="btn" href="#" target="_blank" rel="noopener">Get Tickets</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="kicker">Community-Powered Arts</div>
+        <h1 class="title">Back the band. Boost the drama. Build the show.</h1>
+        <p class="subtitle">We’re a volunteer 501(c)(3) supporting K-12 music and drama across Girard School District — funding instruments and repairs, sets and costumes, travel, scholarships, and the little essentials that make performances feel big.</p>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap; margin-top:1rem">
+          <a class="btn btn-solid" href="#sponsors">See Sponsor Tiers</a>
+          <a class="btn btn-gold" href="#donate">Join or Donate</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About the Boosters</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:1rem">
+            <h3>What we fund</h3>
+            <ul>
+              <li>Scholarships, lessons, and uniform/fee assistance</li>
+              <li>Sets, costumes, sound/lighting, pit and tech needs</li>
+              <li>Travel for festivals, camps, and adjudications</li>
+              <li>Signature events: craft fairs, raffles, concessions</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:1rem">
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="https://www.girardsd.org/" target="_blank" rel="noopener">Girard School District</a></li>
+              <li><a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372747" target="_blank" rel="noopener">District Music Hub (GHS)</a></li>
+              <li><a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372159" target="_blank" rel="noopener">Girard High School</a></li>
+              <li><a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372161" target="_blank" rel="noopener">Rice Avenue Middle School</a></li>
+              <li><a href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372160" target="_blank" rel="noopener">Elk Valley Elementary</a></li>
+              <li><a href="https://www.facebook.com/GirardMusicandDramaBoosters" target="_blank" rel="noopener">Boosters on Facebook</a></li>
+            </ul>
+          </div>
+          <div class="card" style="padding:1rem">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:girardmusicboosters@gmail.com">girardmusicboosters@gmail.com</a></p>
+            <p>Mailing: P.O. Box 425, Girard, PA 16417</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs">
+      <div class="container">
+        <div class="section-header"><h2>Programs Across the District</h2></div>
+        <div class="grid grid-3">
+          <a class="card" href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372160" target="_blank" rel="noopener" style="padding:1rem; text-decoration:none">
+            <div class="chip">Elementary</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Elk Valley Elementary</h3>
+            <p class="muted">K-4 general music, performances, and arts integration.</p>
+          </a>
+          <a class="card" href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372161" target="_blank" rel="noopener" style="padding:1rem; text-decoration:none">
+            <div class="chip">Middle</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Rice Avenue Middle School</h3>
+            <p class="muted">5-8 band/chorus and RAMS drama opportunities.</p>
+          </a>
+          <a class="card" href="https://www.girardsd.org/apps/pages/index.jsp?type=d&uREC_ID=372159" target="_blank" rel="noopener" style="padding:1rem; text-decoration:none">
+            <div class="chip">High</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Girard High School</h3>
+            <p class="muted">9-12 music, marching band, theatre productions, and more.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="officers">
+      <div class="container">
+        <div class="section-header"><h2>2025-26 Officers</h2></div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:1rem"><h3 style="color:var(--red)">Mike Abbey</h3><p class="muted">President</p></div>
+          <div class="card" style="padding:1rem"><h3 style="color:var(--red)">Matthew LaFata</h3><p class="muted">Vice President</p></div>
+          <div class="card" style="padding:1rem"><h3 style="color:var(--red)">Nancy Bottom</h3><p class="muted">Treasurer</p></div>
+          <div class="card" style="padding:1rem"><h3 style="color:var(--red)">Cheyelle Couse</h3><p class="muted">Secretary</p></div>
+          <div class="card" style="padding:1rem"><h3 style="color:var(--red)">Joe Meka</h3><p class="muted">Social Media</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="container">
+        <div class="section-header"><h2>Events & Calendar</h2></div>
+        <div class="grid grid-2">
+          <div class="embed">
+            <!-- Replace about:blank with your Google Calendar embed URL; the frame hides automatically if left blank. -->
+            <iframe title="Calendar" src="about:blank" height="560" loading="lazy"></iframe>
+          </div>
+          <div class="embed" style="padding:0 0 0 0; min-height:560px;">
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"></script>
+            <div class="fb-page" data-href="https://www.facebook.com/GirardMusicandDramaBoosters" data-tabs="timeline" data-width="500" data-height="560" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/GirardMusicandDramaBoosters" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/GirardMusicandDramaBoosters">Facebook</a></blockquote></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="container">
+        <div class="section-header"><h2>Media</h2></div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:0; aspect-ratio:4/3; background:#eee; display:flex; align-items:center; justify-content:center">Photo</div>
+          <div class="card" style="padding:0; aspect-ratio:4/3; background:#eee; display:flex; align-items:center; justify-content:center">Photo</div>
+          <div class="card" style="padding:0; aspect-ratio:4/3; background:#eee; display:flex; align-items:center; justify-content:center">Photo</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate">
+      <div class="container">
+        <div class="section-header"><h2>Support the Arts</h2></div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:1rem">
+            <h3 style="color:var(--red)">One-Time Gift</h3>
+            <p class="muted">Fuel scholarships, sets, instruments, travel, and more.</p>
+            <a class="btn btn-solid" href="mailto:girardmusicboosters@gmail.com?subject=Donation%20Inquiry">Donate Now</a>
+          </div>
+          <div class="card" style="padding:1rem">
+            <h3 style="color:var(--red)">Become a Member</h3>
+            <p class="muted">Join the Boosters. Pick a level; get updates and perks.</p>
+            <a class="btn btn-outline" href="mailto:girardmusicboosters@gmail.com?subject=Membership">Join the Boosters</a>
+          </div>
+          <div class="card" style="padding:1rem">
+            <h3 style="color:var(--red)">Corporate Sponsorship</h3>
+            <p class="muted">Partner as Presenting, Gold, or Red tier.</p>
+            <a class="btn btn-gold" href="#sponsors">View Sponsor Tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sponsors">
+      <div class="container">
+        <div class="section-header"><h2>Sponsorship Tiers</h2></div>
+        <div class="grid grid-3">
+          <div class="card" style="padding:1rem">
+            <div class="chip">Presenting</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Presenting Partner</h3>
+            <ul>
+              <li>Logo on programs and banners</li>
+              <li>Stage acknowledgment at shows</li>
+              <li>Social and website thank you</li>
+            </ul>
+            <a class="btn btn-solid" href="mailto:girardmusicboosters@gmail.com?subject=Presenting%20Sponsor">Contact Us</a>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div class="chip">Gold</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Gold Sponsor</h3>
+            <ul>
+              <li>Logo on programs</li>
+              <li>Website thank you</li>
+              <li>Complimentary tickets</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:girardmusicboosters@gmail.com?subject=Gold%20Sponsor">Contact Us</a>
+          </div>
+          <div class="card" style="padding:1rem">
+            <div class="chip">Red</div>
+            <h3 style="color:var(--red); margin-top:.5rem">Red Sponsor</h3>
+            <ul>
+              <li>Name listed on website</li>
+              <li>Social thank you</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:girardmusicboosters@gmail.com?subject=Red%20Sponsor">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-header"><h2>Contact & Links</h2></div>
+        <div class="grid grid-2">
+          <div class="card" style="padding:1rem">
+            <h3>Email</h3>
+            <p><a href="mailto:girardmusicboosters@gmail.com">girardmusicboosters@gmail.com</a></p>
+            <h3>Mailing Address</h3>
+            <p>P.O. Box 425<br>Girard, PA 16417</p>
+          </div>
+          <div class="card" style="padding:1rem">
+            <h3>Follow</h3>
+            <p><a target="_blank" rel="noopener" href="https://www.facebook.com/GirardMusicandDramaBoosters">Facebook: Girard Music and Drama Boosters</a></p>
+            <p><a target="_blank" rel="noopener" href="https://www.girardsd.org/">Girard School District</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center">
+      <div>© <span id="yr">2025</span> Girard Music and Drama Boosters</div>
+      <div class="muted">Built to be fast, simple, and edit-friendly. No frameworks needed.</div>
+    </div>
+  </footer>
+
+  <script>
+  // === Easy Site Config ===
+  var CONFIG = {
+    tickets: {
+      enabled: false,                 // set to true when you're ready
+      show: "",                      // e.g., "Fall Musical: Beauty & the Beast"
+      url: "",                       // e.g., "https://your-boxoffice-link"
+      start: "",                     // optional ISO string: "2025-11-01T00:00:00-04:00"
+      end: ""                        // optional ISO string
+    }
+  };
+
+  // Set current year without needing a build step
+  (function(){
+    var el = document.getElementById('yr');
+    if(el) el.textContent = new Date().getFullYear();
+  })();
+
+  // Tickets banner logic (supports ?tickets=on to force show)
+  (function(){
+    var t = (CONFIG && CONFIG.tickets) || {};
+    var el = document.getElementById('tickets');
+    if(!el) return;
+    var force = new URLSearchParams(location.search).get('tickets');
+    var hasUrl = t.url && t.url !== '#' && t.url.trim() !== '';
+    var within = true;
+    var now = new Date();
+    if (t.start) within = within && (now >= new Date(t.start));
+    if (t.end) within = within && (now <= new Date(t.end));
+    if ((t.enabled && hasUrl && within) || force === 'on') {
+      var text = document.getElementById('tickets-text');
+      var link = document.getElementById('tickets-link');
+      if (text) text.textContent = t.show ? (t.show + ' — now on sale') : 'Now on sale';
+      if (link && hasUrl) link.href = t.url;
+      el.style.display = 'block';
+    }
+  })();
+</script>
+</body>
+</html>
